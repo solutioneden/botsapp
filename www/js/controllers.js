@@ -401,7 +401,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
       {
         "keywords": [
           'hi',
-          'clair'
+          'clare'
         ],
         "message_id": 0
       },
