@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.taydo.hichat" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Clair ai bots</name>
+    <name>Fintech Bank</name>
     <description>
-        Bots for clair ai
+        Fintech for bank
     </description>
     <author email="zhimeng.huang@gmail.com" href="https://www.solutioneden.com">
-      Zhimeng Huang
+      Zhimeng and Ken
     </author>
     <content src="index.html" />
     <access origin="*" />
