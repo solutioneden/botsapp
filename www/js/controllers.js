@@ -21,36 +21,45 @@ angular.module('starter.controllers', ['ionic.closePopup'])
   })
 
   .controller('signCtrl', function ($scope, $state, $http, $ionicPopup, Login, User, Camera, $filter, $localStorage) {
-    $scope.data = {};
-    $scope.choseArea = {name: "United States", "areacode": "1"};
+    // $scope.data = { phone: "25693540", password: "000000"};
+    $scope.choseArea = {name: "Hong Kong", "areacode": "852"};    
+
     $scope.showValue = {"type": "password", "text": "Show"};
     $scope.login = function () {
-      if (!angular.isDefined($scope.data.phone)) {
-        $scope.data.notification = "Plese enter your phone number to continue";
-      } else {
-        $scope.showLoading("Loading...");
-        $scope.data.notification = false;
-        $scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
-        $scope.userLogin = Login().get($scope.data.fullPhone);
-        $scope.userLogin.$loaded(function () {
-          $scope.hideLoading();
-          if (angular.isDefined($scope.userLogin.active)) {
-            $scope.data.notification = "Your account is inactive, please active mail for register";
-          } else {
-            if ($scope.userLogin.password == $scope.data.password) {
-              $localStorage.userLogin = {};
-              $localStorage.userLogin.isLogin = true;
-              $localStorage.userLogin.id = $scope.userLogin.id;
-              $localStorage.userLogin.phone = $scope.userLogin.$id;
-              $localStorage.userLogin.password = $scope.data.password;
-              $localStorage.userLogin.areacode = Number($scope.choseArea.areacode);
-              $state.go("tab.messages");
-            } else {
-              $scope.data.notification = "The password you entered is incorrect";
-            }
-          }
-        });
-      }
+      $localStorage.userLogin = {};
+      $localStorage.userLogin.isLogin = true;
+      $localStorage.userLogin.id = 1;
+      $localStorage.userLogin.phone = 1;
+      $localStorage.userLogin.password = 000000;
+      $localStorage.userLogin.areacode = 44;
+      $state.go("tab.messages");
+
+      // if (!angular.isDefined($scope.data.phone)) {
+      //   $scope.data.notification = "Plese enter your phone number to continue";
+      // } else {
+      //   $scope.showLoading("Loading...");
+      //   $scope.data.notification = false;
+      //   $scope.data.fullPhone = $scope.choseArea.areacode + $scope.data.phone;
+      //   $scope.userLogin = Login().get($scope.data.fullPhone);
+      //   $scope.userLogin.$loaded(function () {
+      //     $scope.hideLoading();
+      //     if (angular.isDefined($scope.userLogin.active)) {
+      //       $scope.data.notification = "Your account is inactive, please active mail for register";
+      //     } else {
+      //       if ($scope.userLogin.password == $scope.data.password) {
+      //         $localStorage.userLogin = {};
+      //         $localStorage.userLogin.isLogin = true;
+      //         $localStorage.userLogin.id = $scope.userLogin.id;
+      //         $localStorage.userLogin.phone = $scope.userLogin.$id;
+      //         $localStorage.userLogin.password = $scope.data.password;
+      //         $localStorage.userLogin.areacode = Number($scope.choseArea.areacode);
+      //         $state.go("tab.messages");
+      //       } else {
+      //         $scope.data.notification = "The password you entered is incorrect";
+      //       }
+      //     }
+      //   });
+      // }
     };
     $scope.register = function () {
       if (!$scope.data.phone || !$scope.data.password) {
@@ -894,7 +903,7 @@ angular.module('starter.controllers', ['ionic.closePopup'])
   })
 
   .controller('contactsAdd', function ($scope, $state, $localStorage, $ionicPopup, Login) {
-    $scope.choseArea = {name: "United States", "areacode": "1"};
+    $scope.choseArea = {name: "Hong Kong", "areacode": "852"};
     $scope.warning = false;
     $scope.searchPerson = function (phone) {
       $scope.warning = false;

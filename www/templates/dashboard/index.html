@@ -1,14 +1,14 @@
-<link href="css/settings.css" rel="stylesheet">
+	<link href="css/settings.css" rel="stylesheet">
 <ion-view title="Dashboard">
  <ion-content>
-	<div class="stable-bg padding-bottom">
+	<div class="stable-bg">
 	<div class="list">
 
 	<div style="background: white;">
 		<img class="margin-auto" src="css/img/smartbank.jpg" width="200px" style="padding: 0px">
 	</div>
 
-	<div class="item item-avatar" ui-sref="profiles">
+	<div class="item item-avatar padding-bottom" style="margin-bottom: 10px;" ui-sref="profiles">
 		<img ng-if="profile.avatar" ng-src="{{profile.avatar}}">
 
 		<img ng-if="!profile.avatar" ng-src="css/img/icon-avatar.png">		
@@ -17,13 +17,13 @@
 
 	</div>
 
-	<div class="item item-avatar">
+	<div class="item item-avatar" style="background-color: rgb(249, 249, 97); margin-bottom: 10px;">
 <!-- 		<img ng-if="profile.avatar" ng-src="{{profile.avatar}}">
 
 		<img ng-if="!profile.avatar" ng-src="css/img/icon-avatar.png"> -->		
 
-		<i class="icon ion-location" 
-		style="position: absolute;top: 16px;left: 26px;max-width: 40px;max-height: 40px;font-size: 40px;"></i>
+		<i class="icon ion-chatbubble-working" 
+		style="position: absolute;top: 16px;left: 26px;max-width: 40px;max-height: 40px;font-size: 46px;"></i>
 		<div style="white-space: normal;">You just bought a ticket from Expedia.</div>
 		<div style="white-space: normal;">Are you travelling soon?</div>		
 		<small class="stable">Personal Advices</small>
@@ -38,14 +38,14 @@
 	</div>
 
 	<div class="list settings-main padding-horizontal">
-	  <div class="item item-icon-left no-border border-bottom">Spending in September</div>
-	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsMessages"><b style="font-size: 20px;">Total<b><span class="pull-right">$2,070</span></a>	  
+	  <div class="item item-icon-left no-border border-bottom"><b>Spending in September</b></div>
+	  <a class="item item-icon-left no-border border-bottom"><b style="font-size: 20px;">Total<b><span class="pull-right">$3,502</span></a>	  
 
-	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsMessages"><i class="icon ion-fork"></i>Food<span class="pull-right">$100</span></a>
-	  <a class="item item-icon-left no-border border-bottom" style="background: #ddd;" ui-sref="settingsAccount"><i class="icon ion-map"></i>Travelling<span class="pull-right">$1,100</span></a>
-	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsContacts"><i class="icon ion-model-s"></i>Transportation<span class="pull-right">$520</span></a>
-	  <a class="item item-icon-left no-border border-bottom" style="background: #ddd;" ui-sref="settingsLanguages"><i class="icon ion-woman"></i>Clothes<span class="pull-right">$200</span></a>
-	  <a class="item item-icon-left no-border border-bottom" ui-sref="about"><i class="icon ion-iphone"></i>Electronics<span class="pull-right">$150</span></a>	  
+	  <a class="item item-icon-left no-border border-bottom"><i class="icon ion-fork"></i>Food<span class="pull-right">$1,532</span></a>
+	  <a class="item item-icon-left no-border border-bottom" style="background: #ddd;"><i class="icon ion-map"></i>Travelling<span class="pull-right">$1,100</span></a>
+	  <a class="item item-icon-left no-border border-bottom"><i class="icon ion-model-s"></i>Transportation<span class="pull-right">$520</span></a>
+	  <a class="item item-icon-left no-border border-bottom" style="background: #ddd;"><i class="icon ion-man"></i>Clothes<span class="pull-right">$200</span></a>
+	  <a class="item item-icon-left no-border border-bottom"><i class="icon ion-iphone"></i>Electronics<span class="pull-right">$150</span></a>	  
 	</div>
 
  </ion-content>
