@@ -105,7 +105,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
             controller: 'messagesCtrl'
           }
         }
-      })
+      })      
 
       .state('detail', {
         cache: false,
@@ -241,6 +241,17 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
         }
       })
 
+    .state('tab.dashboard', {
+        cache: false,
+        url: '/dashboard',
+        views: {
+          'tab-dashboard': {
+            templateUrl: 'templates/dashboard/index.html',
+            controller: 'settingsCtrl'
+          }
+        }
+      })
+
       .state('profiles', {
         url: '/settings/profiles',
         templateUrl: 'templates/settings/profiles.html',
@@ -268,6 +279,22 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
       .state('about', {
         url: '/settings/about',
         templateUrl: 'templates/settings/about.html',
+      })
+
+      // .state('chat', {
+      //   url: '/chat',
+      //   templateUrl: 'templates/chat.html',
+      // })
+
+      .state('tab.chat', {
+        cache: false,
+        url: '/chat',
+        views: {
+          'tab-chat': {
+            templateUrl: 'templates/chat.html',
+            controller: 'settingsCtrl'
+          }
+        }
       })
 
       .state('settingsAccount', {

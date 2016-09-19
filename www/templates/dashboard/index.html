@@ -1,0 +1,52 @@
+<link href="css/settings.css" rel="stylesheet">
+<ion-view title="Dashboard">
+ <ion-content>
+	<div class="stable-bg padding-bottom">
+	<div class="list">
+
+	<div style="background: white;">
+		<img class="margin-auto" src="css/img/smartbank.jpg" width="200px" style="padding: 0px">
+	</div>
+
+	<div class="item item-avatar" ui-sref="profiles">
+		<img ng-if="profile.avatar" ng-src="{{profile.avatar}}">
+
+		<img ng-if="!profile.avatar" ng-src="css/img/icon-avatar.png">		
+
+		<div style="white-space: normal; font-size: 25px; padding-top: 10px;">Balances<span class="pull-right">$40,000</span></div>
+
+	</div>
+
+	<div class="item item-avatar">
+<!-- 		<img ng-if="profile.avatar" ng-src="{{profile.avatar}}">
+
+		<img ng-if="!profile.avatar" ng-src="css/img/icon-avatar.png"> -->		
+
+		<i class="icon ion-location" 
+		style="position: absolute;top: 16px;left: 26px;max-width: 40px;max-height: 40px;font-size: 40px;"></i>
+		<div style="white-space: normal;">You just bought a ticket from Expedia.</div>
+		<div style="white-space: normal;">Are you travelling soon?</div>		
+		<small class="stable">Personal Advices</small>
+
+		<div class="pull-right">
+			<a class="button" ui-sref="tab.chat">Yes</a>
+			<a class="button" ui-sref="tab.chat">No</a>
+		</div>
+
+	</div>
+	</div>
+	</div>
+
+	<div class="list settings-main padding-horizontal">
+	  <div class="item item-icon-left no-border border-bottom">Spending in September</div>
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsMessages"><b style="font-size: 20px;">Total<b><span class="pull-right">$2,070</span></a>	  
+
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsMessages"><i class="icon ion-fork"></i>Food<span class="pull-right">$100</span></a>
+	  <a class="item item-icon-left no-border border-bottom" style="background: #ddd;" ui-sref="settingsAccount"><i class="icon ion-map"></i>Travelling<span class="pull-right">$1,100</span></a>
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="settingsContacts"><i class="icon ion-model-s"></i>Transportation<span class="pull-right">$520</span></a>
+	  <a class="item item-icon-left no-border border-bottom" style="background: #ddd;" ui-sref="settingsLanguages"><i class="icon ion-woman"></i>Clothes<span class="pull-right">$200</span></a>
+	  <a class="item item-icon-left no-border border-bottom" ui-sref="about"><i class="icon ion-iphone"></i>Electronics<span class="pull-right">$150</span></a>	  
+	</div>
+
+ </ion-content>
+</ion-view>
